@@ -1,0 +1,1878 @@
+/* Color variables */
+/* Scene 2 */
+:root {
+    --main-bg-color: #dcf6fc;
+    --green-shade1: #0a490a;
+    --green-shade2: #418541;
+    --green-shade3: #70a370;
+    --green-shade4: #7cbb7c;
+    --green-shade5: #90c590;
+    --green-shade6: #a7d1a7;
+    --red-shade1: #8b1818;
+    --red-shade2: #e26b68;
+    --red-shade3: #e57d7a;
+    --blue-cloud: #8ae0f3;
+    --black: #000000;
+    --road: #e2ede2;
+}
+
+/* Scene 3 */
+:root {
+    --main-bg-color: rgb(220, 246, 252);
+    --ground-color: rgb(226, 237, 226);
+    --big-tree-color: rgb(112, 163, 112);
+    --small-tree-color: rgb(65, 133, 65);
+    --bg-bush-color: rgb(10, 73, 10);
+    --fg-bush-color: rgb(167, 209, 167);
+    --cloud-color: rgb(138, 224, 243);
+    --stump-color: rgb(29, 29, 27);
+    --main-house-color: rgb(226, 107, 104);
+    --wall-color: rgb(248, 170, 159);
+    --windows-color: white;
+}
+
+/* Scene 4 */
+:root {
+    --white: #FFFFFF;
+    --black: #1D1D1B;
+    --sun__yellow: #FFF054;
+    --sun__organge: #FFA500;
+    --sky__blue--light: #DCF6FC;
+    --cloud__blue--medium: #8AE0F2;
+    --grass__green--light: #E2EDE2;
+    --grass__green--medium: #3D550C;
+    --bush__green--light: #A6D1A7;
+    --bush__green--medium: #408441;
+    --bush__green--dark: #0A490A;
+    --tree__green--medium: #70A370;
+    --tree__brown--dark: #1D1D1B;
+    --house__green--light: #70A370;
+    --house__green--medium: #7CBA7C;
+    --house__green--dark: #0A490A;
+    --house__red--light: #EB9B9A;
+    --house__red--medium: #E26B68;
+    --house__red--dark: #8B1819;
+}
+
+/* End color variables */
+
+/* Animations */
+/* Scene 2 */
+@keyframes shake {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(5px, 5px) rotate(5deg);
+    }
+
+    50% {
+        transform: translate(0, 0) rotate(0eg);
+    }
+
+    75% {
+        transform: translate(-5px, 5px) rotate(-5deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
+
+/*scene 3 */
+@keyframes drift {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+
+    25% {
+        transform: translateX(150px) translateY(10px);
+    }
+
+    50% {
+        transform: translateX(250px) translateY(20px);
+    }
+
+    75% {
+        transform: translateX(350px) translateY(25px);
+    }
+
+    100% {
+        transform: translateX(500px) translateY(0px);
+    }
+}
+
+/* Scene 4 */
+/* Cloud animation */
+@keyframes clouds {
+    100% {
+        transform: translateX(340px);
+    }
+}
+
+/* Sun animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        animation-timing-function: ease-in;
+    }
+
+    50% {
+        transform: scale(1.2);
+        animation-timing-function: ease-out;
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Hover big bush */
+@keyframes hvr-wobble-horizontal {
+    16.65% {
+        transform: translateX(8px);
+    }
+
+    33.3% {
+        transform: translateX(-6px);
+    }
+
+    49.95% {
+        transform: translateX(4px);
+    }
+
+    66.6% {
+        transform: translateX(-2px);
+    }
+
+    83.25% {
+        transform: translateX(1px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Hover medium */
+@keyframes hvr-wobble-top {
+    16.65% {
+        transform: skew(-12deg);
+    }
+
+    33.3% {
+        transform: skew(10deg);
+    }
+
+    49.95% {
+        transform: skew(-6deg);
+    }
+
+    66.6% {
+        transform: skew(4deg);
+    }
+
+    83.25% {
+        transform: skew(-2deg);
+    }
+
+    100% {
+        transform: skew(0);
+    }
+}
+
+/* Hover small bush */
+@keyframes hvr-wobble-vertical {
+    16.65% {
+        transform: translateY(8px);
+    }
+
+    33.3% {
+        transform: translateY(-6px);
+    }
+
+    49.95% {
+        transform: translateY(4px);
+    }
+
+    66.6% {
+        transform: translateY(-2px);
+    }
+
+    83.25% {
+        transform: translateY(1px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Hover tree */
+@keyframes hvr-buzz {
+    50% {
+        transform: translateX(3px) rotate(2deg);
+    }
+
+    100% {
+        transform: translateX(-3px) rotate(-2deg);
+    }
+}
+
+/* End animations */
+
+/* General styling */
+body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+.story {
+    display: inline-flex;
+    scrollbar-width: none;
+    /* Hiding scrollbar */
+    -ms-overflow-style: none;
+    /* Hiding scrollbar */
+}
+
+/* Hiding scrollbar */
+::-webkit-scrollbar {
+    display: none;
+}
+
+.scene {
+    height: 1000px;
+}
+
+.scene--1 {
+    background: var(--sky__blue--light);
+    width: 1260px;
+}
+
+/* Scene 1 styling */
+.skyscrapers--wrapper2 {
+    position: relative;
+    bottom: 550px;
+    left: 600px;
+}
+
+.skyscrapers--wrapper2 .skyscraper--red {
+    position: relative;
+    bottom: 450px;
+    left: 270px;
+}
+
+.skyscrapers--wrapper2 .skyscraper--green,
+.skyscrapers--wrapper2 .skyscraper--red {
+    animation-play-state: paused;
+}
+
+.scene--1 .house {
+    z-index: 2;
+    right: 275px;
+    top: 20px;
+}
+
+.scene--1 .building {
+    z-index: 2;
+    right: 335px;
+    top: 210px;
+    transform: scale(140%);
+}
+
+/* From scene 1 */
+.scene--1 .bushleft--container {
+    top: -880px;
+    left: 470px;
+    z-index: 6;
+}
+
+.scene--1 .leftcloud--container {
+    top: -1290px;
+    left: 100px;
+}
+
+/* From scene 3*/
+.scene--1 .rightcloud--container3 {
+    top: -1750px;
+    left: -100px;
+}
+
+/* From scene 4 */
+/* skyscraper */
+.scene--1 .houses__house:nth-child(1) {
+    left: 1020px;
+    top: -1450px;
+    z-index: 2;
+}
+
+/* roof */
+.scene--1 .houses__house:nth-child(2) {
+    left: 1020px;
+    top: -1540px;
+    z-index: 3;
+}
+
+/* house - green and red wall */
+.scene--1 .houses__house:nth-child(3) {
+    background: linear-gradient(to right, var(--house__green--medium) 0%, var(--house__green--medium) 60%, var(--house__red--dark) 60%, var(--house__red--dark) 100%);
+    height: 150px;
+    width: 300px;
+    left: 970px;
+    top: -1470px;
+    z-index: 2;
+}
+
+.scene--1 .houses__house:last-of-type {
+    display: none;
+}
+
+/* End scene 1 styling*/
+
+.scene--2 {
+    background: var(--sky__blue--light);
+    width: 1260px;
+    box-sizing: border-box;
+}
+
+/* Scene 2 styling */
+.wrapper {
+    position: relative;
+    top: -600px;
+}
+
+.cloud--wrapper,
+.skyscrapers--wrapper,
+.bush--wrapper,
+.bushes--front--wrapper,
+.leftcloud--container,
+.rightcloud--container,
+.skyscraper--green,
+.skyscraper--red,
+.treeandbushes--front--container,
+.bushleft--container,
+.bushcenter--container,
+.bushright--container,
+.bushfront--container {
+    display: flex;
+}
+
+.cloud--wrapper {
+    justify-content: space-between;
+}
+
+.cloud--wrapper,
+.bush--wrapper,
+.bushes--front--wrapper {
+    height: 0;
+}
+
+.treeandbushes--front--container {
+    width: 0;
+}
+
+.skyscrapers--wrapper,
+.bush--wrapper,
+.bushes--front--wrapper {
+    justify-content: center;
+}
+
+.skyscrapers--wrapper {
+    padding: 5% 100px 0 0;
+}
+
+.skyscrapers--wrapper,
+.leftcloud--container,
+.rightcloud--container,
+.skyscraper--green,
+.skyscraper--red,
+.treeandbushes--front--container,
+.bushleft--container,
+.bushright--container,
+.bigtreeleft--container {
+    z-index: 1;
+}
+
+.leftcloud--container,
+.rightcloud--container,
+.skyscraper--green,
+.bushes--container,
+.treeandbushes--front--container,
+.bushleft--container,
+.bushcenter--container,
+.bushright--container,
+.bushfront--container,
+.smalltreeleft--container,
+.smalltreeright--container,
+.bigtreeleft--container,
+.bigtreeright--container,
+.skyscraper--greens:nth-child(2),
+.skyscraper--reds:nth-child(2),
+.bushleft--circle:nth-child(odd),
+.bushright--circle:nth-child(odd),
+.bushcenter--circle:nth-child(odd),
+.bushright--circle:nth-child(odd),
+.bushfront--circle:nth-child(odd),
+.tree--circle:nth-child(4),
+.tree--circle:nth-child(-n + 2),
+.bigtree--circle:nth-child(-n + 2),
+.bigtree--circle:nth-child(4),
+.grass--road {
+    position: relative;
+}
+
+.leftcloud--container,
+.bushleft--container,
+.bushfront--container {
+    top: 200px;
+}
+
+.leftcloud--container,
+.rightcloud--container {
+    width: 333px;
+    height: 100px;
+}
+
+.rightcloud--container {
+    right: 20px;
+    top: 80px;
+}
+
+.skyscraper--green {
+    left: 80px;
+    top: 30px;
+}
+
+.bushes--container {
+    bottom: 226px;
+    left: 182px;
+}
+
+.treeandbushes--front--container {
+    bottom: 180px;
+    left: 170px;
+}
+
+.bushleft--container {
+    right: 180px;
+}
+
+.bushcenter--container,
+.bushleft--container,
+.bushright--container,
+.bushfront--container {
+    width: 445px;
+    height: 133px;
+}
+
+.bushcenter--container {
+    top: 87px;
+    right: 50px;
+    z-index: 3;
+}
+
+.bushright--container {
+    bottom: 66px;
+}
+
+.bushfront--container {
+    z-index: 3;
+}
+
+.smalltreeleft--container {
+    right: 310px;
+    top: 20px;
+}
+
+.smalltreeright--container {
+    right: 330px;
+    z-index: 2;
+}
+
+.bigtreeleft--container,
+.bigtreeright--container {
+    right: 360px;
+}
+
+.bigtreeleft--container {
+    bottom: 70px;
+}
+
+.bigtreeright--container {
+    bottom: 60px;
+}
+
+.cloud--circle {
+    background-color: var(--blue-cloud);
+}
+
+.cloud--circle:nth-child(-n + 3),
+.bushfront--circle:nth-child(-n + 3),
+.bushcenter--circle:nth-child(-n + 3),
+.bushright--circle:nth-child(-n + 3),
+.bushleft--circle:nth-child(-n + 3) {
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+}
+
+.cloud--circle:nth-child(1) {
+    width: 107px;
+    height: 40px;
+}
+
+.cloud--circle:nth-child(2) {
+    width: 140px;
+    height: 30px;
+    margin-top: 10px;
+}
+
+.cloud--circle:nth-child(3) {
+    width: 89px;
+    height: 20px;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.skyscraper--greens:nth-child(-n + 2),
+.skyscraper--reds:nth-child(-n + 2) {
+    height: 440px;
+    width: 140px;
+    background-color: var(--green-shade2);
+}
+
+.skyscraper--reds:nth-child(1),
+.skyscraper--greens:nth-child(1) {
+    transform: perspective(400px) rotateY(160deg);
+}
+
+.skyscraper--greens:nth-child(1) {
+    background-color: var(--green-shade2);
+}
+
+.skyscraper--greens:nth-child(2),
+.skyscraper--reds:nth-child(2) {
+    padding: 0;
+    margin: 0;
+    transform: perspective(1000px) rotateY(60deg);
+    right: 33px;
+}
+
+.skyscraper--greens:nth-child(2) {
+    background-color: var(--green-shade1);
+}
+
+.skyscraper--reds:nth-child(1) {
+    background-color: var(--red-shade2);
+}
+
+.skyscraper--reds:nth-child(2) {
+    background-color: var(--red-shade1);
+    right: 33px;
+}
+
+.bushleft--circle {
+    background-color: var(--green-shade4);
+}
+
+.bushleft--circle:nth-child(odd) {
+    width: 160px;
+    height: 40px;
+    margin-top: 30px;
+}
+
+.bushleft--circle:nth-child(2) {
+    width: 180px;
+    height: 70px;
+}
+
+.bushleft--circle:nth-child(1) {
+    left: 110px;
+}
+
+.bushleft--circle:nth-child(3) {
+    right: 90px;
+}
+
+.bushcenter--circle {
+    background-color: var(--green-shade2);
+}
+
+.bushcenter--circle:nth-child(odd) {
+    width: 100px;
+    height: 30px;
+    margin-top: 20px;
+}
+
+.bushcenter--circle:nth-child(2) {
+    width: 120px;
+    height: 50px;
+}
+
+.bushcenter--circle:nth-child(1) {
+    left: 80px;
+}
+
+.bushcenter--circle:nth-child(3) {
+    right: 70px;
+}
+
+.bushright--circle {
+    background-color: var(--green-shade1);
+}
+
+.bushright--circle:nth-child(odd) {
+    width: 130px;
+    height: 40px;
+    margin-top: 30px;
+}
+
+.bushright--circle:nth-child(2) {
+    width: 150px;
+    height: 70px;
+}
+
+.bushright--circle:nth-child(1) {
+    left: 100px;
+}
+
+.bushright--circle:nth-child(3) {
+    right: 80px;
+}
+
+.bushfront--circle {
+    background-color: var(--green-shade2);
+}
+
+.bushfront--circle:nth-child(odd) {
+    width: 160px;
+    height: 50px;
+    margin-top: 40px;
+}
+
+.bushfront--circle:nth-child(2) {
+    width: 240px;
+    height: 90px;
+}
+
+.bushfront--circle:nth-child(1) {
+    left: 90px;
+}
+
+.bushfront--circle:nth-child(3) {
+    right: 50px;
+}
+
+.tree--circle {
+    background-color: var(--green-shade2);
+}
+
+.tree--circle:nth-child(-n + 2) {
+    width: 50px;
+    height: 50px;
+    left: 8px;
+}
+
+.tree--circle:nth-child(-n + 2),
+.tree--circle:nth-child(3),
+.bigtree--circle:nth-child(-n + 2),
+.bigtree--circle:nth-child(3) {
+    border-radius: 100%;
+}
+
+.tree--circle:nth-child(1) {
+    top: 20px;
+}
+
+.tree--circle:nth-child(2) {
+    top: 10px;
+}
+
+.tree--circle:nth-child(3) {
+    width: 70px;
+    height: 70px;
+}
+
+.tree--circle:nth-child(4) {
+    background-color: var(--black);
+    height: 150px;
+    width: 5px;
+    left: 31px;
+    bottom: 85px;
+}
+
+.bigtree--circle {
+    background-color: var(--green-shade3);
+}
+
+.bigtree--circle:nth-child(-n + 2) {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    left: 8px;
+}
+
+.bigtree--circle:nth-child(1) {
+    top: 30px;
+}
+
+.bigtree--circle:nth-child(2) {
+    top: 15px;
+}
+
+.bigtree--circle:nth-child(3) {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+.bigtree--circle:nth-child(4) {
+    background-color: var(--black);
+    height: 200px;
+    width: 5px;
+    left: 45px;
+    bottom: 120px;
+}
+
+.leftcloud--container,
+.rightcloud--container,
+.skyscraper--green,
+.skyscraper--red {
+    animation-name: shake;
+    animation-duration: 0.15s;
+    animation-iteration-count: infinite;
+}
+
+.smalltreeleft--container,
+.smalltreeright--container,
+.bigtreeleft--container,
+.bigtreeright--container {
+    transition: transform 0.7s ease-in-out;
+}
+
+.smalltreeleft--container:hover,
+.smalltreeright--container:hover,
+.bigtreeleft--container:hover,
+.bigtreeright--container:hover {
+    transform: rotateY(360deg);
+}
+
+.bushright--container,
+.bushcenter--container,
+.bushright--container,
+.bushfront--container {
+    transition: transform 0.2s ease-in-out;
+}
+
+.bushright--container:hover,
+.bushcenter--container:hover,
+.bushright--container:hover,
+.bushfront--container:hover {
+    transform: rotateY(25deg);
+}
+
+/* End scene 2 styling */
+/* Scene 3 */
+.scene--3 {
+    background: var(--sky__blue--light);
+    width: 1260px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Scene 3 styling */
+
+.moon--container {
+    position: relative;
+    height: 0;
+    width: 0;
+    top: 300px;
+    z-index: 10;
+    left: 550px;
+}
+
+.moon {
+    width: 4000px;
+    height: 4000px;
+    border-radius: 50%;
+    box-shadow: 32px 32px 0 0 var(--moon-color);
+    position: relative;
+    visibility: visible;
+    border: 10px solid red;
+
+}
+
+.cloud--wrapper3 {
+    position: relative;
+    width: 0;
+    height: 0;
+    z-index: 3;
+}
+
+.cloud--circle3 {
+    position: relative;
+    background-color: var(--cloud-color);
+}
+
+.cloud3 {
+    position: relative;
+    bottom: 300px;
+}
+
+.cloud4 {
+    position: relative;
+    left: 340px;
+    bottom: 720px;
+}
+
+.cloud--wrapper3 {
+    position: relative;
+    animation-name: drift;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.cloud--circle3:nth-child(1) {
+    clip-path: ellipse(22% 19% at 30% 100%);
+    height: 200px;
+    width: 200px;
+    position: relative;
+    left: 160px;
+    top: 200px
+}
+
+.cloud--circle3:nth-child(2) {
+    clip-path: ellipse(27% 13% at 30% 100%);
+    height: 200px;
+    width: 200px;
+    position: relative;
+    left: 230px;
+}
+
+.cloud--circle3:nth-child(3) {
+    clip-path: ellipse(27% 15% at 30% 100%);
+    width: 140px;
+    height: 140px;
+    position: relative;
+    left: 360px;
+    bottom: 140px;
+}
+
+.moon--container {
+    position: relative;
+    height: 0;
+    width: 0;
+}
+
+.moon {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: 32px 32px 0 0 var(--moon-color);
+    position: relative;
+    z-index: 6;
+    left: 550px;
+    visibility: hidden;
+}
+
+.moon .show {
+    visibility: visible;
+
+}
+
+
+/*bushes*/
+.fg-bush {
+    height: 0;
+    width: 0;
+    bottom: 500px;
+    position: relative;
+    transition: 2s ease-in-out;
+    z-index: 4;
+}
+
+.fg-bush:hover {
+    transform: rotate(1turn);
+    position: relative;
+}
+
+
+
+.bg-bushes {
+    height: 0;
+    width: 0;
+}
+
+.first-bush {
+    height: 0;
+    position: relative;
+    right: 50px;
+    z-index: 1;
+}
+
+.left-first-bush {
+    background-color: var(--bg-bush-color);
+    height: 55px;
+    width: 100px;
+    z-index: 4;
+    clip-path: ellipse(28% 33% at 56% 100%);
+    position: relative;
+    right: 50px;
+    top: 150px;
+}
+
+
+.middle-first-bush {
+    background-color: var(--bg-bush-color);
+    height: 45px;
+    width: 90px;
+    z-index: 4;
+    clip-path: circle(34.3% at 50% 100%);
+    position: relative;
+    right: 30px;
+    top: 105px;
+}
+
+.right-first-bush {
+    background-color: var(--bg-bush-color);
+    height: 45px;
+    width: 75px;
+    z-index: 4;
+    clip-path: ellipse(28% 35% at 56% 100%);
+    position: relative;
+    top: 60px;
+    left: 5px;
+}
+
+.left-bush {
+    background-color: var(--fg-bush-color);
+    height: 110px;
+    width: 200px;
+    z-index: 4;
+    position: relative;
+    clip-path: ellipse(28% 33% at 56% 100%);
+    top: 410px;
+    left: 780px;
+}
+
+.middle-bush {
+    background-color: var(--fg-bush-color);
+    height: 130px;
+    width: 220px;
+    z-index: 4;
+    position: relative;
+    clip-path: circle(34.3% at 50% 100%);
+    top: 280px;
+    left: 820px;
+}
+
+.right-bush {
+    height: 0;
+    background-color: var(--fg-bush-color);
+    height: 110px;
+    width: 170px;
+    z-index: 4;
+    position: relative;
+    clip-path: ellipse(28% 35% at 56% 100%);
+    top: 170px;
+    left: 910px;
+}
+
+.second-bush {
+    height: 0;
+    position: relative;
+    top: 5x;
+    right: 20px;
+    z-index: 1;
+}
+
+.left-second-bush {
+    background-color: var(--small-tree-color);
+    height: 55px;
+    width: 100px;
+    z-index: 4;
+    clip-path: ellipse(28% 33% at 56% 100%);
+    position: relative;
+    right: 50px;
+    top: 150px;
+}
+
+.middle-second-bush {
+    background-color: var(--small-tree-color);
+    height: 45px;
+    width: 90px;
+    z-index: 4;
+    clip-path: circle(34.3% at 50% 100%);
+    position: relative;
+    right: 30px;
+    top: 105px;
+}
+
+.right-second-bush {
+    background-color: var(--small-tree-color);
+    height: 45px;
+    width: 75px;
+    z-index: 4;
+    clip-path: ellipse(28% 35% at 56% 100%);
+    position: relative;
+    top: 60px;
+    left: 5px;
+}
+
+.third-bush {
+    height: 0;
+    position: relative;
+    left: 50px;
+    z-index: 1;
+    top: 20px;
+}
+
+.left-third-bush {
+    background-color: var(--small-tree-color);
+    height: 55px;
+    width: 100px;
+    z-index: 4;
+    clip-path: ellipse(28% 33% at 56% 100%);
+    position: relative;
+    right: 50px;
+    top: 150px;
+}
+
+.middle-third-bush {
+    background-color: var(--small-tree-color);
+    height: 45px;
+    width: 90px;
+    z-index: 4;
+    clip-path: circle(34.3% at 50% 100%);
+    position: relative;
+    right: 30px;
+    top: 105px;
+}
+
+.right-third-bush {
+    background-color: var(--small-tree-color);
+    height: 45px;
+    width: 75px;
+    z-index: 4;
+    clip-path: ellipse(28% 35% at 56% 100%);
+    position: relative;
+    top: 60px;
+    left: 5px;
+}
+
+
+/*trees*/
+.treeline {
+    position: relative;
+    bottom: 380px;
+    left: 290px;
+    z-index: 4;
+    transition: 1s ease-in-out;
+}
+
+.treeline:hover {
+    translate: 600px 40px;
+    z-index: -2;
+    rotate: x 0.25turn;
+}
+
+/*large trees*/
+.first-large-tree {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    right: 50px;
+}
+
+
+.top-first-large-tree {
+    background-color: var(--big-tree-color);
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    z-index: 1;
+    position: relative;
+    top: 60px;
+    right: 15px;
+}
+
+.middle-first-large-tree {
+    background-color: var(--big-tree-color);
+    width: 35px;
+    height: 35px;
+    border-radius: 17px;
+    z-index: 1;
+    position: relative;
+    top: 55px;
+    right: 15px;
+}
+
+.bottom-first-large-tree {
+    background-color: var(--big-tree-color);
+    width: 45px;
+    height: 45px;
+    border-radius: 22px;
+    z-index: 1;
+    position: relative;
+    top: 50px;
+    right: 20px;
+}
+
+.first-large-stump {
+    background-color: var(--stump-color);
+    height: 110px;
+    width: 4px;
+    position: relative;
+    z-index: 3;
+    bottom: 5px;
+}
+
+.second-large-tree {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    left: 80px;
+}
+
+.top-second-large-tree {
+    background-color: var(--big-tree-color);
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    position: relative;
+    top: 5px;
+}
+
+.middle-second-large-tree {
+    background-color: var(--big-tree-color);
+    width: 35px;
+    height: 35px;
+    border-radius: 17px;
+    position: relative;
+}
+
+.bottom-second-large-tree {
+    background-color: var(--big-tree-color);
+    width: 45px;
+    height: 45px;
+    border-radius: 22px;
+    position: relative;
+    right: 5px;
+    bottom: 5px;
+}
+
+.second-large-stump {
+    background-color: var(--stump-color);
+    height: 110px;
+    width: 4px;
+    position: relative;
+    left: 15px;
+    bottom: 60px;
+}
+
+
+/*small trees*/
+
+.first-small-tree {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    bottom: 55px;
+}
+
+.top-first-small-tree {
+    background-color: var(--small-tree-color);
+    width: 27px;
+    height: 27px;
+    border-radius: 13px;
+    position: relative;
+    top: 32px;
+    right: 2px;
+}
+
+.middle-first-small-tree {
+    background-color: var(--small-tree-color);
+    width: 27px;
+    height: 27px;
+    border-radius: 13px;
+    position: relative;
+    top: 30px;
+    right: 2px;
+}
+
+.bottom-first-small-tree {
+    background-color: var(--small-tree-color);
+    width: 35px;
+    height: 35px;
+    border-radius: 17px;
+    position: relative;
+    top: 22px;
+    right: 5px;
+}
+
+.first-small-stump {
+    background-color: var(--stump-color);
+    height: 90px;
+    width: 4px;
+    position: relative;
+    bottom: 20px;
+    left: 10px;
+}
+
+.second-small-tree {
+    height: 50px;
+    width: 50px;
+    position: relative;
+    left: 65px;
+    bottom: 100px;
+}
+
+.top-second-small-tree {
+    background-color: var(--small-tree-color);
+    width: 27px;
+    height: 27px;
+    border-radius: 13px;
+    position: relative;
+    right: 10px;
+    top: 48px;
+}
+
+.middle-second-small-tree {
+    background-color: var(--small-tree-color);
+    width: 27px;
+    height: 27px;
+    border-radius: 13px;
+    position: relative;
+    right: 10px;
+    top: 45px;
+}
+
+.bottom-second-small-tree {
+    background-color: var(--small-tree-color);
+    width: 35px;
+    height: 35px;
+    border-radius: 17px;
+    position: relative;
+    right: 15px;
+    top: 40px;
+}
+
+.second-small-stump {
+    background-color: var(--stump-color);
+    height: 90px;
+    width: 4px;
+    position: relative;
+    bottom: 5px;
+}
+
+/*house*/
+.house {
+    height: 0;
+    position: relative;
+    bottom: 30px;
+}
+
+.house-top-roof {
+    background-color: var(--stump-color);
+    height: 59px;
+    width: 160px;
+    position: relative;
+    left: 1065px;
+    bottom: 360px;
+    clip-path: polygon(0 0, 60% 0, 100% 100%, 40% 100%);
+    z-index: 1;
+}
+
+
+.house-top-floor {
+    background-color: var(--main-house-color);
+    clip-path: polygon(50% 0%, 100% 38%, 100% 80%, 0 76%, 0% 38%);
+    width: 140px;
+    height: 160px;
+    position: relative;
+    left: 995px;
+    bottom: 420px;
+    z-index: 1;
+}
+
+.circle-window {
+    background-color: var(--stump-color);
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    z-index: 400;
+    position: relative;
+    top: 40px;
+    left: 54px;
+}
+
+.house-top-floor-right {
+    background-color: var(--main-house-color);
+    width: 90px;
+    height: 60px;
+    position: relative;
+    bottom: 520px;
+    left: 1134px;
+    z-index: 1;
+}
+
+.house-front {
+    background-color: var(--wall-color);
+    width: 300px;
+    height: 350px;
+    bottom: 590px;
+    left: 915px;
+    z-index: 1;
+    position: relative;
+    clip-path: polygon(27% 20%, 73% 20%, 100% 39%, 100% 100%, 0 100%, 0 39%);
+}
+
+.house-right-side {
+    background-color: var(--main-house-color);
+    width: 85px;
+    height: 215px;
+    position: relative;
+    left: 1214px;
+    bottom: 805px;
+    z-index: 1;
+}
+
+
+.house-bottom-roof {
+    background-color: var(--stump-color);
+    height: 66px;
+    width: 170px;
+    position: relative;
+    left: 1130px;
+    bottom: 1085px;
+    clip-path: polygon(0 0, 55% 0, 100% 100%, 50% 100%);
+    z-index: 1;
+}
+
+
+/*building*/
+
+.building {
+    position: relative;
+    right: 20px;
+    height: 0;
+    top: 30px;
+}
+
+.building-front {
+    background-color: var(--main-house-color);
+    width: 150px;
+    height: 250px;
+    position: relative;
+    clip-path: polygon(22% 23%, 78% 23%, 100% 39%, 100% 100%, 0 100%, 0 39%);
+    top: -447px;
+    left: 710px;
+    z-index: 2;
+}
+
+.building-roof {
+    background-color: var(--bg-bush-color);
+    height: 65px;
+    width: 125px;
+    position: relative;
+    left: 826px;
+    top: -348px;
+    z-index: 1;
+    clip-path: polygon(0 37%, 75% 37%, 100% 100%, 15% 100%);
+}
+
+.building-right-side {
+    background-color: var(--stump-color);
+    width: 90px;
+    height: 153px;
+    position: relative;
+    left: 860px;
+    top: -600px;
+    z-index: 1;
+}
+
+/* End scene 3 styling */
+
+/* Scene 4 */
+.scene--4 {
+    background: var(--sky__blue--light);
+    width: 1260px;
+}
+
+/* Scene 4 styling */
+.grass {
+    background: var(--grass__green--medium);
+    height: 600px;
+    width: 1260px;
+    position: relative;
+    top: 400px;
+    transition: background-color 3s;
+}
+
+/* For intersection observer */
+.grass--brighter {
+    background-color: var(--grass__green--light);
+}
+
+.sun {
+    background: var(--sun__yellow);
+    box-shadow: 0px 0px 30px 15px var(--sun__yellow);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;
+    left: 600px;
+    top: -500px;
+    animation: pulse 2s infinite;
+    transition: background-color 5s;
+    visibility: hidden;
+}
+
+/* For intersection observer */
+.sun--brighter {
+    visibility: visible;
+}
+
+/* Clouds */
+/* Left cloud */
+.cloud__halfcircle:nth-child(1) {
+    background: var(--cloud__blue--medium);
+    height: 20px;
+    width: 60px;
+    border-radius: 100px / 60px 60px 0px 0px;
+    position: relative;
+    left: 100px;
+    top: -440px;
+    animation: clouds 14s linear alternate infinite;
+}
+
+.cloud__halfcircle:nth-child(1)::before {
+    content: "";
+    background: var(--cloud__blue--medium);
+    height: 30px;
+    width: 60px;
+    border-radius: 60px 60px 0 0;
+    position: absolute;
+    right: 40px;
+    bottom: 0;
+}
+
+.cloud__halfcircle:nth-child(1)::after {
+    content: "";
+    background: var(--cloud__blue--medium);
+    height: 15px;
+    width: 50px;
+    border-radius: 100px / 60px 60px 0px 0px;
+    position: absolute;
+    left: 80px;
+    bottom: 0;
+}
+
+/* End left cloud */
+
+/* Right cloud */
+.cloud__halfcircle:nth-child(2) {
+    background: var(--cloud__blue--medium);
+    height: 20px;
+    width: 60px;
+    border-radius: 100px / 60px 60px 0px 0px;
+    position: relative;
+    left: 800px;
+    top: -590px;
+    animation: clouds 24s linear alternate-reverse infinite;
+}
+
+.cloud__halfcircle:nth-child(2)::before {
+    content: "";
+    background: var(--cloud__blue--medium);
+    height: 30px;
+    width: 60px;
+    border-radius: 60px 60px 0 0;
+    position: absolute;
+    right: 40px;
+    bottom: 0;
+}
+
+.cloud__halfcircle:nth-child(2)::after {
+    content: "";
+    background: var(--cloud__blue--medium);
+    height: 15px;
+    width: 50px;
+    border-radius: 100px / 60px 60px 0px 0px;
+    position: absolute;
+    left: 80px;
+    bottom: 0;
+}
+
+/* End right cloud */
+/* End clouds*/
+
+
+/* Houses */
+.houses>.houses__house {
+    position: relative;
+}
+
+/* Skyscraper */
+.houses__house:nth-child(1) {
+    background: linear-gradient(to right, var(--house__green--light) 0%, var(--house__green--light) 60%, var(--house__red--light) 60%, var(--house__red--light)100%);
+    height: 350px;
+    width: 140px;
+    position: relative;
+    left: 300px;
+    top: -690px;
+}
+
+/* Skyscraper left windows (grid container) */
+.houses__windows--3 {
+    display: grid;
+    grid-template-rows: 25px 25px 25px;
+    position: absolute;
+    left: 22px;
+    top: 32px;
+    z-index: 1;
+}
+
+/* Skyscraper left windows (grid item) */
+.houses__window--3 {
+    background: var(--white);
+    height: 8px;
+    width: 40px;
+}
+
+/* Skyscraper right windows (grid container) */
+.houses__windows--7 {
+    display: grid;
+    grid-template-rows: 25px 25px 25px 25px 25px 25px 25px;
+    position: absolute;
+    left: 98px;
+    top: 32px;
+    z-index: 1;
+}
+
+/* Skyscraper right windows (grid item) */
+.houses__window--7 {
+    background: var(--white);
+    height: 8px;
+    width: 28px;
+}
+
+/* End skyscraper */
+
+/* Left house */
+/* White and black roof top */
+.houses__house:nth-child(2) {
+    background: linear-gradient(to right, var(--white) 0%, var(--white) 40%, var(--black) 40%, var(--black) 100%);
+    height: 20px;
+    width: 200px;
+    left: 320px;
+    top: -840px;
+}
+
+/* Green and red wall */
+.houses__house:nth-child(3) {
+    background: linear-gradient(to right, var(--house__green--medium) 0%, var(--house__green--medium) 60%, var(--house__red--dark) 60%, var(--house__red--dark) 100%);
+    height: 150px;
+    width: 300px;
+    left: 270px;
+    top: -770px;
+}
+
+/* White left roof */
+.houses__house:nth-child(3)::before {
+    content: "";
+    width: 80px;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 70px solid var(--white);
+    position: absolute;
+    top: -70px;
+}
+
+/* Black right roof */
+.houses__house:nth-child(3)::after {
+    content: "";
+    background: var(--black);
+    height: 70px;
+    width: 120px;
+    transform: skew(35deg);
+    position: absolute;
+    left: 155px;
+    top: -70px;
+}
+
+/* Left house windows (grid container) */
+.houses__windows--4 {
+    display: grid;
+    grid-template-columns: 35px 35px 35px 35px;
+    position: absolute;
+    left: 30px;
+    top: 25px;
+}
+
+/* Left house windows (grid item) */
+.houses__window--4 {
+    background: var(--black);
+    height: 22px;
+    width: 12px;
+}
+
+/* End left house */
+
+/* Right house */
+/* Red and black wall */
+.houses__house:last-of-type {
+    background: linear-gradient(to right, var(--house__red--medium) 0%, var(--house__red--medium) 58%, var(--black) 58%, var(--black) 100%);
+    height: 170px;
+    width: 290px;
+    left: 790px;
+    top: -970px;
+}
+
+/* Green roof */
+.houses__house:last-of-type::before {
+    content: "";
+    background: var(--house__green--dark);
+    height: 50px;
+    width: 290px;
+    transform: skew(-40deg);
+    position: absolute;
+    left: 20px;
+    top: -50px;
+}
+
+/* Black side wall */
+.houses__house:last-of-type::after {
+    content: "";
+    background: var(--black);
+    height: 40px;
+    width: 170px;
+    transform: skew(50deg);
+    rotate: 90deg;
+    position: absolute;
+    left: 225px;
+    top: 40px;
+}
+
+/* Right house black windows (grid container) */
+.houses__windows--16 {
+    display: grid;
+    grid-template-columns: 30px 30px 30px 30px;
+    grid-template-rows: 30px 30px 30px 30px;
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    z-index: 1;
+}
+
+/* Right house black windows (grid item)*/
+.houses__window--16 {
+    background: var(--black);
+    height: 16px;
+    width: 16px;
+}
+
+/* Right house white windows (grid container) */
+.houses__windows--6 {
+    display: grid;
+    grid-template-columns: 22px 22px 22px;
+    grid-template-rows: 42px 42px 42px;
+    position: absolute;
+    right: 22px;
+    top: 50px;
+    z-index: 1;
+}
+
+/* Right house white windows (grid item) */
+.houses__window--6 {
+    background: var(--white);
+    height: 22px;
+    width: 10px;
+}
+
+/* End right house */
+
+/* Bushes */
+/* Big right bush */
+.bushes__halfcircle:nth-child(1) {
+    background-color: var(--bush__green--light);
+    height: 130px;
+    width: 270px;
+    border-radius: 200px 200px 0 0;
+    position: relative;
+    left: 780px;
+    top: 70px;
+}
+
+.bushes__halfcircle:nth-child(1)::before {
+    content: "";
+    background-color: var(--bush__green--light);
+    height: 80px;
+    width: 150px;
+    border-radius: 100px 100px 0 0;
+    position: absolute;
+    right: 180px;
+    bottom: 0;
+}
+
+.bushes__halfcircle:nth-child(1)::after {
+    content: "";
+    background-color: var(--bush__green--light);
+    height: 80px;
+    width: 150px;
+    border-radius: 100px 100px 0 0;
+    position: absolute;
+    left: 230px;
+    bottom: 0;
+    z-index: 1;
+}
+
+.bushes__halfcircle:nth-child(1):hover {
+    animation: hvr-wobble-horizontal 1s ease-in-out 1;
+    z-index: 1;
+}
+
+/* End big right bush */
+
+/* Medium left bush */
+.bushes__halfcircle:nth-child(2) {
+    background-color: var(--bush__green--medium);
+    height: 75px;
+    width: 135px;
+    border-radius: 100px 100px 0 0;
+    position: relative;
+    left: 480px;
+    top: -455px;
+}
+
+.bushes__halfcircle:nth-child(2)::before {
+    content: "";
+    background-color: var(--bush__green--medium);
+    height: 40px;
+    width: 75px;
+    border-radius: 100px 100px 0 0;
+    position: absolute;
+    right: 90px;
+    bottom: 0;
+}
+
+.bushes__halfcircle:nth-child(2)::after {
+    content: "";
+    background: var(--bush__green--medium);
+    height: 40px;
+    width: 75px;
+    border-radius: 100px 100px 0 0;
+    position: absolute;
+    left: 115px;
+    bottom: 0;
+}
+
+.bushes__halfcircle:nth-child(2):hover {
+    animation: hvr-wobble-top 1s ease-in-out 1;
+}
+
+/* End medium left bush */
+
+/* Small left bush */
+.bushes__halfcircle:nth-child(3) {
+    background: var(--bush__green--dark);
+    height: 26px;
+    width: 54px;
+    border-radius: 200px 200px 0 0;
+    position: relative;
+    left: 570px;
+    top: -470px;
+}
+
+.bushes__halfcircle:nth-child(3)::before {
+    content: "";
+    background: var(--bush__green--dark);
+    height: 17px;
+    width: 30px;
+    border-radius: 100px 100px 0 0;
+    position: absolute;
+    right: 36px;
+    bottom: 0;
+}
+
+.bushes__halfcircle:nth-child(3)::after {
+    content: "";
+    background-color: var(--bush__green--dark);
+    height: 17px;
+    width: 30px;
+    border-radius: 100px 100px 0 0;
+    position: absolute;
+    left: 46px;
+    bottom: 0;
+}
+
+.bushes__halfcircle:nth-child(3):hover {
+    animation: hvr-wobble-vertical 1s ease-in-out 1;
+}
+
+/* End small left bush */
+/* End Bushes */
+
+/* Tree */
+.tree>.tree__circle {
+    background: var(--tree__green--medium);
+    border-radius: 100%;
+    position: relative;
+}
+
+/* Top circle */
+.tree__circle:nth-child(1) {
+    height: 100px;
+    width: 100px;
+    left: 1050px;
+    top: -250px;
+}
+
+/* Middle circle */
+.tree__circle:nth-child(2) {
+    height: 110px;
+    width: 110px;
+    left: 1045px;
+    top: -280px;
+}
+
+/* Bottom circle */
+.tree__circle:nth-child(3) {
+    height: 120px;
+    width: 120px;
+    left: 1040px;
+    top: -310px;
+}
+
+.tree__trunk {
+    background: var(--tree__brown--dark);
+    height: 260px;
+    width: 8px;
+    position: relative;
+    left: 1095px;
+    top: -460px;
+}
+
+.tree__circle:nth-child(1):hover,
+.tree__circle:nth-child(2):hover,
+.tree__circle:nth-child(3):hover {
+    animation: hvr-buzz 0.15s linear infinite;
+}
+
+/* End tree */
+
+.tree,
+.bushes,
+.houses {
+    height: 0px;
+    width: 0px;
+}
+
+/* End scene 4 styling */
+
+/* Scene 5 */
+.scene--5 {
+    background: var(--sky__blue--light);
+    width: 1260px;
+}

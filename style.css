@@ -79,8 +79,6 @@
         transform: translate(0, 0) rotate(0deg);
     }
 }
-
-/*scene 3 */
 @keyframes drift {
     0% {
         transform: translateX(0) translateY(0);
@@ -102,16 +100,11 @@
         transform: translateX(500px) translateY(0px);
     }
 }
-
-/* Scene 4 */
-/* Cloud animation */
 @keyframes clouds {
     100% {
         transform: translateX(340px);
     }
 }
-
-/* Sun animation */
 @keyframes pulse {
     0% {
         transform: scale(1);
@@ -127,8 +120,6 @@
         transform: scale(1);
     }
 }
-
-/* Hover big bush */
 @keyframes hvr-wobble-horizontal {
     16.65% {
         transform: translateX(8px);
@@ -154,8 +145,6 @@
         transform: translateX(0);
     }
 }
-
-/* Hover medium */
 @keyframes hvr-wobble-top {
     16.65% {
         transform: skew(-12deg);
@@ -181,8 +170,6 @@
         transform: skew(0);
     }
 }
-
-/* Hover small bush */
 @keyframes hvr-wobble-vertical {
     16.65% {
         transform: translateY(8px);
@@ -208,8 +195,6 @@
         transform: translateY(0);
     }
 }
-
-/* Hover tree */
 @keyframes hvr-buzz {
     50% {
         transform: translateX(3px) rotate(2deg);
@@ -220,9 +205,6 @@
     }
 }
 
-/* End animations */
-
-/* General styling */
 body {
     margin: 0;
     padding: 0;
@@ -232,12 +214,9 @@ body {
 .story {
     display: inline-flex;
     scrollbar-width: none;
-    /* Hiding scrollbar */
     -ms-overflow-style: none;
-    /* Hiding scrollbar */
 }
 
-/* Hiding scrollbar */
 ::-webkit-scrollbar {
     display: none;
 }
@@ -251,7 +230,6 @@ body {
     width: 1260px;
 }
 
-/* Scene 1 styling */
 .skyscrapers--wrapper2 {
     position: relative;
     bottom: 550px;
@@ -282,7 +260,6 @@ body {
     transform: scale(140%);
 }
 
-/* From scene 1 */
 .scene--1 .bushleft--container {
     top: -880px;
     left: 470px;
@@ -294,28 +271,23 @@ body {
     left: 100px;
 }
 
-/* From scene 3*/
 .scene--1 .rightcloud--container3 {
     top: -1750px;
     left: -100px;
 }
 
-/* From scene 4 */
-/* skyscraper */
 .scene--1 .houses__house:nth-child(1) {
     left: 1020px;
     top: -1450px;
     z-index: 2;
 }
 
-/* roof */
 .scene--1 .houses__house:nth-child(2) {
     left: 1020px;
     top: -1540px;
     z-index: 3;
 }
 
-/* house - green and red wall */
 .scene--1 .houses__house:nth-child(3) {
     background: linear-gradient(to right, var(--house__green--medium) 0%, var(--house__green--medium) 60%, var(--house__red--dark) 60%, var(--house__red--dark) 100%);
     height: 150px;
@@ -329,15 +301,12 @@ body {
     display: none;
 }
 
-/* End scene 1 styling*/
-
 .scene--2 {
     background: var(--sky__blue--light);
     width: 1260px;
     box-sizing: border-box;
 }
 
-/* Scene 2 styling */
 .wrapper {
     position: relative;
     top: -600px;
@@ -771,16 +740,12 @@ body {
     transform: rotateY(25deg);
 }
 
-/* End scene 2 styling */
-/* Scene 3 */
 .scene--3 {
     background: var(--sky__blue--light);
     width: 1260px;
     display: flex;
     flex-direction: column;
 }
-
-/* Scene 3 styling */
 
 .moon--container {
     position: relative;
@@ -881,8 +846,6 @@ body {
 
 }
 
-
-/*bushes*/
 .fg-bush {
     height: 0;
     width: 0;
@@ -896,8 +859,6 @@ body {
     transform: rotate(1turn);
     position: relative;
 }
-
-
 
 .bg-bushes {
     height: 0;
@@ -1077,14 +1038,12 @@ body {
     rotate: x 0.25turn;
 }
 
-/*large trees*/
 .first-large-tree {
     position: relative;
     height: 50px;
     width: 50px;
     right: 50px;
 }
-
 
 .top-first-large-tree {
     background-color: var(--big-tree-color);
@@ -1170,9 +1129,6 @@ body {
     left: 15px;
     bottom: 60px;
 }
-
-
-/*small trees*/
 
 .first-small-tree {
     position: relative;
@@ -1266,7 +1222,6 @@ body {
     bottom: 5px;
 }
 
-/*house*/
 .house {
     height: 0;
     position: relative;
@@ -1283,7 +1238,6 @@ body {
     clip-path: polygon(0 0, 60% 0, 100% 100%, 40% 100%);
     z-index: 1;
 }
-
 
 .house-top-floor {
     background-color: var(--main-house-color);
@@ -1338,7 +1292,6 @@ body {
     z-index: 1;
 }
 
-
 .house-bottom-roof {
     background-color: var(--stump-color);
     height: 66px;
@@ -1349,9 +1302,6 @@ body {
     clip-path: polygon(0 0, 55% 0, 100% 100%, 50% 100%);
     z-index: 1;
 }
-
-
-/*building*/
 
 .building {
     position: relative;
@@ -1392,15 +1342,11 @@ body {
     z-index: 1;
 }
 
-/* End scene 3 styling */
-
-/* Scene 4 */
 .scene--4 {
     background: var(--sky__blue--light);
     width: 1260px;
 }
 
-/* Scene 4 styling */
 .grass {
     background: var(--grass__green--medium);
     height: 600px;
@@ -1410,7 +1356,6 @@ body {
     transition: background-color 3s;
 }
 
-/* For intersection observer */
 .grass--brighter {
     background-color: var(--grass__green--light);
 }
@@ -1429,13 +1374,10 @@ body {
     visibility: hidden;
 }
 
-/* For intersection observer */
 .sun--brighter {
     visibility: visible;
 }
 
-/* Clouds */
-/* Left cloud */
 .cloud__halfcircle:nth-child(1) {
     background: var(--cloud__blue--medium);
     height: 20px;
@@ -1469,9 +1411,6 @@ body {
     bottom: 0;
 }
 
-/* End left cloud */
-
-/* Right cloud */
 .cloud__halfcircle:nth-child(2) {
     background: var(--cloud__blue--medium);
     height: 20px;
@@ -1505,16 +1444,10 @@ body {
     bottom: 0;
 }
 
-/* End right cloud */
-/* End clouds*/
-
-
-/* Houses */
 .houses>.houses__house {
     position: relative;
 }
 
-/* Skyscraper */
 .houses__house:nth-child(1) {
     background: linear-gradient(to right, var(--house__green--light) 0%, var(--house__green--light) 60%, var(--house__red--light) 60%, var(--house__red--light)100%);
     height: 350px;
@@ -1524,7 +1457,6 @@ body {
     top: -690px;
 }
 
-/* Skyscraper left windows (grid container) */
 .houses__windows--3 {
     display: grid;
     grid-template-rows: 25px 25px 25px;
@@ -1534,14 +1466,12 @@ body {
     z-index: 1;
 }
 
-/* Skyscraper left windows (grid item) */
 .houses__window--3 {
     background: var(--white);
     height: 8px;
     width: 40px;
 }
 
-/* Skyscraper right windows (grid container) */
 .houses__windows--7 {
     display: grid;
     grid-template-rows: 25px 25px 25px 25px 25px 25px 25px;
@@ -1551,17 +1481,12 @@ body {
     z-index: 1;
 }
 
-/* Skyscraper right windows (grid item) */
 .houses__window--7 {
     background: var(--white);
     height: 8px;
     width: 28px;
 }
 
-/* End skyscraper */
-
-/* Left house */
-/* White and black roof top */
 .houses__house:nth-child(2) {
     background: linear-gradient(to right, var(--white) 0%, var(--white) 40%, var(--black) 40%, var(--black) 100%);
     height: 20px;
@@ -1570,7 +1495,6 @@ body {
     top: -840px;
 }
 
-/* Green and red wall */
 .houses__house:nth-child(3) {
     background: linear-gradient(to right, var(--house__green--medium) 0%, var(--house__green--medium) 60%, var(--house__red--dark) 60%, var(--house__red--dark) 100%);
     height: 150px;
@@ -1579,7 +1503,6 @@ body {
     top: -770px;
 }
 
-/* White left roof */
 .houses__house:nth-child(3)::before {
     content: "";
     width: 80px;
@@ -1590,7 +1513,6 @@ body {
     top: -70px;
 }
 
-/* Black right roof */
 .houses__house:nth-child(3)::after {
     content: "";
     background: var(--black);
@@ -1602,7 +1524,6 @@ body {
     top: -70px;
 }
 
-/* Left house windows (grid container) */
 .houses__windows--4 {
     display: grid;
     grid-template-columns: 35px 35px 35px 35px;
@@ -1611,17 +1532,12 @@ body {
     top: 25px;
 }
 
-/* Left house windows (grid item) */
 .houses__window--4 {
     background: var(--black);
     height: 22px;
     width: 12px;
 }
 
-/* End left house */
-
-/* Right house */
-/* Red and black wall */
 .houses__house:last-of-type {
     background: linear-gradient(to right, var(--house__red--medium) 0%, var(--house__red--medium) 58%, var(--black) 58%, var(--black) 100%);
     height: 170px;
@@ -1630,7 +1546,6 @@ body {
     top: -970px;
 }
 
-/* Green roof */
 .houses__house:last-of-type::before {
     content: "";
     background: var(--house__green--dark);
@@ -1642,7 +1557,6 @@ body {
     top: -50px;
 }
 
-/* Black side wall */
 .houses__house:last-of-type::after {
     content: "";
     background: var(--black);
@@ -1655,7 +1569,6 @@ body {
     top: 40px;
 }
 
-/* Right house black windows (grid container) */
 .houses__windows--16 {
     display: grid;
     grid-template-columns: 30px 30px 30px 30px;
@@ -1666,14 +1579,12 @@ body {
     z-index: 1;
 }
 
-/* Right house black windows (grid item)*/
 .houses__window--16 {
     background: var(--black);
     height: 16px;
     width: 16px;
 }
 
-/* Right house white windows (grid container) */
 .houses__windows--6 {
     display: grid;
     grid-template-columns: 22px 22px 22px;
@@ -1684,17 +1595,12 @@ body {
     z-index: 1;
 }
 
-/* Right house white windows (grid item) */
 .houses__window--6 {
     background: var(--white);
     height: 22px;
     width: 10px;
 }
 
-/* End right house */
-
-/* Bushes */
-/* Big right bush */
 .bushes__halfcircle:nth-child(1) {
     background-color: var(--bush__green--light);
     height: 130px;
@@ -1733,9 +1639,6 @@ body {
     z-index: 1;
 }
 
-/* End big right bush */
-
-/* Medium left bush */
 .bushes__halfcircle:nth-child(2) {
     background-color: var(--bush__green--medium);
     height: 75px;
@@ -1772,9 +1675,6 @@ body {
     animation: hvr-wobble-top 1s ease-in-out 1;
 }
 
-/* End medium left bush */
-
-/* Small left bush */
 .bushes__halfcircle:nth-child(3) {
     background: var(--bush__green--dark);
     height: 26px;
@@ -1811,17 +1711,12 @@ body {
     animation: hvr-wobble-vertical 1s ease-in-out 1;
 }
 
-/* End small left bush */
-/* End Bushes */
-
-/* Tree */
 .tree>.tree__circle {
     background: var(--tree__green--medium);
     border-radius: 100%;
     position: relative;
 }
 
-/* Top circle */
 .tree__circle:nth-child(1) {
     height: 100px;
     width: 100px;
@@ -1829,7 +1724,6 @@ body {
     top: -250px;
 }
 
-/* Middle circle */
 .tree__circle:nth-child(2) {
     height: 110px;
     width: 110px;
@@ -1837,7 +1731,6 @@ body {
     top: -280px;
 }
 
-/* Bottom circle */
 .tree__circle:nth-child(3) {
     height: 120px;
     width: 120px;
@@ -1860,8 +1753,6 @@ body {
     animation: hvr-buzz 0.15s linear infinite;
 }
 
-/* End tree */
-
 .tree,
 .bushes,
 .houses {
@@ -1869,9 +1760,6 @@ body {
     width: 0px;
 }
 
-/* End scene 4 styling */
-
-/* Scene 5 */
 .scene--5 {
     background: var(--sky__blue--light);
     width: 1260px;

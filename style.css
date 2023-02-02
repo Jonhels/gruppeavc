@@ -79,6 +79,7 @@
         transform: translate(0, 0) rotate(0deg);
     }
 }
+
 @keyframes drift {
     0% {
         transform: translateX(0) translateY(0);
@@ -100,11 +101,13 @@
         transform: translateX(500px) translateY(0px);
     }
 }
+
 @keyframes clouds {
     100% {
         transform: translateX(340px);
     }
 }
+
 @keyframes pulse {
     0% {
         transform: scale(1);
@@ -120,6 +123,7 @@
         transform: scale(1);
     }
 }
+
 @keyframes hvr-wobble-horizontal {
     16.65% {
         transform: translateX(8px);
@@ -145,6 +149,7 @@
         transform: translateX(0);
     }
 }
+
 @keyframes hvr-wobble-top {
     16.65% {
         transform: skew(-12deg);
@@ -170,6 +175,7 @@
         transform: skew(0);
     }
 }
+
 @keyframes hvr-wobble-vertical {
     16.65% {
         transform: translateY(8px);
@@ -195,6 +201,7 @@
         transform: translateY(0);
     }
 }
+
 @keyframes hvr-buzz {
     50% {
         transform: translateX(3px) rotate(2deg);
